@@ -1,21 +1,13 @@
 
  // CHECK http://jstarrdewar.com/blog/2012/02/04/input-box-tips-part-1/
 
-$(document).ready(function(){
-
-    $count.hide();
-    $('input[type=file]').bootstrapFileInput();
-    $('.file-inputs').bootstrapFileInput();
-
-})
-
- textareas = $('textarea')
- $count = $('.count')
- button = $('.button')
- limit = 140;
-
+     textareas = $('textarea')
+     $count = $('.count')
+     button = $('.button')
+     limit = 140;
     
     $(textareas).focus(function(e){
+        console.log(e)
         temp = e.currentTarget.parentElement.parentElement.children[1];
         target = e.currentTarget;
 

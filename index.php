@@ -63,8 +63,7 @@
               <span class="glyphicon glyphicon-search"></span>
             </button>
           </form>
-        </div>
-        </div>
+        </div></div>
         </nav>
         <!--/.nav-collapse -->
 
@@ -80,8 +79,7 @@
               <textarea id="chapost" class="form-control post" placeholder="Post a new challenge..."></textarea>          
             </div>
             <div class="count" >
-              <button type="button" class="btn btn-primary submitpost">
-              </button>
+              <button type="button" class="btn btn-primary submitpost"></button>
               <input id="fileupload" title="Add File" class="btn-default" type="file" name="files[]" data-filename-placement="inside" data-url="server/php/" multiple>
             </div>
             
@@ -93,7 +91,7 @@
 
         <section id="timeline">
 
-          
+          <?php require 'php/loadcha.php' ?>
 
         </section>
 
