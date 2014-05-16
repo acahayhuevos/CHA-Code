@@ -27,6 +27,8 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
   
+        <!-- NAVIGATION BAR -->
+
         <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
           <div class="container">
               <div class="navbar-header">
@@ -61,21 +63,158 @@
               <span class="glyphicon glyphicon-search"></span>
             </button>
           </form>
-        </div><!--/.nav-collapse -->
-
- 
-          </div>
-        </nav>
-
-        <div class="container">
-
         </div>
+        </div>
+        </nav>
+        <!--/.nav-collapse -->
 
-      </div> <!-- /container -->        <script src=h"https//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+        <!-- POST FORM -->
+
+        <!-- Falta la posibilidad de subir img 
+        CHECK http://blueimp.github.io/jQuery-File-Upload/basic-plus.html -->
+
+        <div class="container wrap">
+          <form role="form">
+            <div class="form-group">
+              <textarea id="chapost" class="form-control post" placeholder="Post a new challenge..."></textarea>          
+            </div>
+            <div class="count" >
+              <button type="button" class="btn submitpost">
+              </button>
+              <input id="fileupload" title="Add File" class="btn-primary" type="file" name="files[]" data-filename-placement="inside" data-url="server/php/" multiple>
+            </div>
+            
+          </form>
+
+        <!--/ POST FORM -->
+
+        <!-- CONTENT FORM -->
+
+        <section>
+
+          <article>
+
+            <!-- AVATAR -->
+
+            <!-- Avatar no es responsive para res. movil -->
+
+            <aside>
+              <div class="avatar">
+                <img src="images/u1.jpg" class="img-circle img-responsive" alt="username">
+              </div>
+            </aside>
+
+            <!-- POST -->
+
+            <div class="well">
+            <div class="post">
+              <p>Pick up any girl in your next class and invite 
+              her to a pub or club tonight</p>
+            </div>
+
+            <p>#pickup #shypeople #ifyouknowhatimean</p>
+
+            <div id="vote">
+              <button type="submit" class="btn btn-link vote">
+                <span class="glyphicon glyphicon-thumbs-up"></span>
+              </button>
+              <button type="submit" class="btn btn-link vote">
+                <span class="glyphicon glyphicon-thumbs-down"></span>
+              </button>
+            </div>
+
+            <!--WRITE REPLAYS-->
+
+          <form role="form">
+            <div class="form-group">
+              <textarea id="chapost" class="form-control post" placeholder="Leave a comment or replay..."></textarea>          
+            </div>
+            <div class="count" >
+              <button type="button" class="btn submitpost">
+                
+              </button>
+            </div>
+            
+          </form>
+
+            <!-- REPLAYS-->
+
+          <div class="replay well">
+
+            <!-- AVATAR -->
+
+            <aside>
+              <div class="avatar2">
+                <img src="images/u2.jpg" class="img-circle img-responsive" alt="username">
+              </div>
+            </aside>
+
+            <!-- CONTENT -->
+
+            <div class="content">
+              <p>I Just did it, it was fucking awesome dude, you had to see their faces while i was doing it, it was like the bes thing ever, i love this page!</p>
+
+              <div id="vote">
+                <button type="submit" class="btn btn-link vote">
+                  <span class="glyphicon glyphicon-thumbs-up"></span>
+                </button>
+                <button type="submit" class="btn btn-link vote">
+                  <span class="glyphicon glyphicon-thumbs-down"></span>
+                </button>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="replay well">
+
+            <!-- AVATAR -->
+
+            <aside>
+              <div class="avatar2">
+                <img src="images/u2.jpg" class="img-circle img-responsive" alt="username">
+              </div>
+            </aside>
+
+            <!-- CONTENT -->
+
+            <div class="content">
+              <p>I Just did it, it was fucking awesome dude, you had to see their faces while i was doing it, it was like the bes thing ever, i love this page!</p>
+
+              <div id="vote">
+                <button type="submit" class="btn btn-link vote">
+                  <span class="glyphicon glyphicon-thumbs-up"></span>
+                </button>
+                <button type="submit" class="btn btn-link vote">
+                  <span class="glyphicon glyphicon-thumbs-down"></span>
+                </button>
+              </div>
+
+            </div>
+
+
+            </div>
+
+          </article>
+        </section>
+
+    
+
+
+      
+      </div>
+        
+      </div> <!-- /container -->        
+      <script src=h"https//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
 
         <script src="js/vendor/bootstrap.min.js"></script>
-
         <script src="js/main.js"></script>
+        <script src="js/input.js"></script>
+        <script src="js/vendor/jquery.ui.widget.js"></script>
+        <script src="js/jquery.iframe-transport.js"></script>
+        <script src="js/jquery.fileupload.js"></script>
+        <script src="js/file-input.js"></script>
     </body>
 </html>

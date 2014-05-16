@@ -1,79 +1,20 @@
+
+
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-#bg{
-   position: relative;
-   margin: 0 auto;
-}
 
-#bg img{
-min-height: 100%;
-min-width: 1024px;
-width:100%;
-height: auto;
-position: fixed;
-left: 0;
-z-index: -1;
 
--webkit-transition: opacity 1s ease-in-out;
-  -moz-transition: opacity 1s ease-in-out;
-  -o-transition: opacity 1s ease-in-out;
-  transition: opacity 1s ease-in-out;
-}
-
-.fadein img {
-    position:absolute;
-    left:-65px;
-    top:0;
-    -webkit-animation-name: fade;
-    -webkit-animation-iteration-count: infinite;
-    -webkit-animation-duration: 15s;
-    animation-name: fade;
-    animation-iteration-count: infinite;
-    animation-duration: 15s;
-}
-
-@-webkit-keyframes fade {
-    0% {opacity: 0;}
-    20% {opacity: 1;}
-    33% {opacity: 1;}
-    53% {opacity: 0;}
-    100% {opacity: 0;}
-}
-@keyframes fade {
-    0% {opacity: 0;}
-    20% {opacity: 1;}
-    33% {opacity: 1;}
-    53% {opacity: 0;}
-    100% {opacity: 0;}
-}
-
-#f1 {
-    background-color: lightblue;
-}
-#f2 {
-    -webkit-animation-delay: -10s;
-    background-color: yellow;
-}
-#f3 {
-    -webkit-animation-delay: -5s;
-    background-color: lightgreen;
-}
-
-@media screen and (max-width: 1024px){
-   #bg img{
-    left: 50%;
-    margin-left: -512px;
-   }
-}
+	/* NAV */
 
    .navbar-default{
    	background-image: none;
-   	background-color: #FFFF00; 	
+   	background-color: #D7B52A;
+   	border-color: #B29724;
    }
 
    input.form-control{
-   	border-radius: 40px;
+   	border-radius: 5px;
    }
 
    .navbar-default .navbar-brand{
@@ -87,100 +28,112 @@ z-index: -1;
 
    .active>a.foo{
    	background-image: none;
-   	background-color: #FF4000;
+   	background-color: #B29724;
    }
 
    .navbar-default .navbar-nav>.active>a{
    	background-image: none;
-   	background-color: #FFC500;
+   	background-color: #C4A62A;
    }
 
    .navbar-default .navbar-nav>.active>a:hover{
    	background-image: none;
-   	background-color: #FFC500;
+   	background-color: #B29724;
    }
 
    .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus{
-   	background-color: #FFC500;
+   	background-color: #D7B52A;
    }
 
    .navbar-default .navbar-toggle{
    	background-color: white;
    }
 
-}
-.form-signin input[type="email"]{
-   margin-bottom: -1px;
-   border-bottom-right-radius: 0;
-   border-bottom-left-radius: 0; 
-}
+   .navbar-default .navbar-nav>li>a {
+      color: black;
+   }
 
-.form-signin{
-   max-width: 420px;
-   padding: 15px;
-   margin: 0 auto;
-   margin-top: 10%;
-   color: black;
-}
 
-.form-signin .form-control{
-position: relative;
-height: auto;
-box-sizing: border-box;
-font-size: 16px;
-margin-bottom: 10px;
-}
+   /* BODY */
 
-.form-control{
-   display: block;
-   width: 100%;
-   height: 34px;
-   padding: 6px 12px;
-   font-size: 14px;
-   line-height: 1.5;
-   background-image: none;
-   border: 1px solid white;
-   border-radius: 5px;
-}
+   body .wrap{
+   	margin-top: 20px;
+   	width: 600px;
+   }@media (max-width:600px){ body .wrap{width: 400px}}@media (max-width:400px){ body .wrap{width: 300px}}
 
-.form-signin .form-signin-heading, .form-signin .checkbox{
-   margin-bottom: 10px;
-}
-.placeholder{
-line-height: 1.0;
-}
+   .count{
+   	margin-top: -8px;
+      margin-bottom: 8px;
+      text-align: right;
+   }
 
-input.form-control{
-   border-radius: 5px;
-}
+   .badge{
+   	background-color: gray;
+   }
 
-input{
-   line-height: normal;
-   letter-spacing: normal;
-   word-spacing: normal;
-   text-transform: none;
-   text-indent: 0px;
-   text-align: start;
-}
+   #fileupload{
+      text-shadow: none;
+   }
 
-input, button, select, textarea{
-   font-family: inherit;
-   font-size: inherit;
-   line-height: inherit;
-}
+   section{
+   	border-color: #BBBBBB;
+   	border-style: solid;
+   	border-width: 1px;
+   	border-radius: 5px;
+   }
 
-input[type="password"], input[type="search"]{
-   -webkit-appearance: textfield;
-   cursor: auto;
-}
-h2{
-   font-weight: bold;
-   line-height: 2.0;
-}
-h2, .h2{
-   font-size: 30px;
-}
+   .well{
+   	border: none;
+      margin-bottom: 10px;
+   }
 
-.slogan{
-   margin-top: -10px;
-}
+   /*Avatar no es responsive para res. movil*/
+
+   .avatar{
+      position: absolute;
+      margin-left: -70px;
+   }
+
+   .avatar2{
+      float: left;
+   }
+
+   .avatar>img, .avatar2>img {
+      width: 50px;
+      height: 50px;
+   }
+
+   .content{
+      margin-left: 70px;
+   }
+
+   .vote{
+      margin-bottom: 8px;
+      border-color: #BBBBBB;
+      border-radius: 5px; 
+   }
+
+   .vote:hover{
+      margin-bottom: 8px;
+      border-color: #BBBBBB;
+      border-radius: 5px; 
+   }
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
