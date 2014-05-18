@@ -7,7 +7,7 @@
      limit = 140;
     
     $(textareas).focus(function(e){
-        console.log(e)
+        //console.log(e)
         temp = e.currentTarget.parentElement.parentElement.children[1];
         target = e.currentTarget;
 
@@ -58,10 +58,10 @@
 
         });
 
-    $(button).click(function(e){
+    /*$(button).click(function(e){
         var temp = e.currentTarget.parentElement.parentElement.children[1];
-        $(temp).fadeOut("slow")
-    })
+       $(temp).fadeOut("slow")
+    })*/
   
 
 function displayLength(t, temp) {

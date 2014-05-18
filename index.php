@@ -74,11 +74,11 @@
         CHECK http://blueimp.github.io/jQuery-File-Upload/basic-plus.html -->
 
         <div class="container wrap">
-          <form role="form">
+          <form role="form" action="post.php" method="POST">
             <div class="form-group">
               <textarea id="chapost" class="form-control post" placeholder="Post a new challenge..."></textarea>          
             </div>
-            <div class="count" >
+            <div class="count">
               <button type="button" class="btn btn-primary submitpost"></button>
               <input id="fileupload" title="Add File" class="btn-default" type="file" name="files[]" data-filename-placement="inside" data-url="server/php/" multiple>
             </div>
@@ -91,7 +91,7 @@
 
         <section id="timeline">
 
-          <?php require 'php/loadcha.php' ?>
+          <?php require 'php/load.php' ?>
 
         </section>
 
