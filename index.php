@@ -29,9 +29,35 @@
   
         <!-- NAVIGATION BAR -->
 
-        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <nav class="navbar-default navbar-fixed-top" role="navigation">
+          
           <div class="container">
-              <div class="navbar-header">
+
+            <form class="navbar-form navbar-right" role="search">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search">
+              </div>
+              <button type="submit" class="btn btn-link">
+                <span class="glyphicon glyphicon-search"></span>
+              </button>
+          </form>
+
+          <div class="navbar-collapse collapse navbar-right">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="#"><span class="glyphicon glyphicon-tower"></span> Home</a></li>
+              <li><a href="#about"><span class="glyphicon glyphicon-plane"></span> Explore</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> Me <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">My Profile</a></li>
+                  <li><a href="#">Settings</a></li>
+                  <li><a href="#">Logout</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+            
+            <div class="navbar-header  navbar-right">
                   <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
@@ -39,34 +65,12 @@
                         <span class="icon-bar"></span>
                   </button>
                   <a class="navbar-brand" href="#">CHA!</a>
-              </div>
-
-
-          <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#"><span class="glyphicon glyphicon-tower"></span> Home</a></li>
-            <li><a href="#about"><span class="glyphicon glyphicon-plane"></span> Explore</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> Me <b class="caret"></b></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">My Profile</a></li>
-                <li><a href="#">Settings</a></li>
-                <li><a href="#">Logout</a></li>
-              </ul>
-            </li>
-          </ul>
-          <form class="navbar-form navbar-right" role="search">
-            <div class="form-group">
-              <input type="text" class="form-control" placeholder="Search">
             </div>
-            <button type="submit" class="btn btn-link">
-              <span class="glyphicon glyphicon-search"></span>
-            </button>
-          </form>
-        </div></div>
+
+
+      </div>
         </nav>
         <!--/.nav-collapse -->
-
 
         <!-- POST FORM -->
 
@@ -76,11 +80,24 @@
         <div class="container wrap">
           <form role="form" action="post.php" method="POST">
             <div class="form-group">
-              <textarea id="chapost" class="form-control post" placeholder="Post a new challenge..."></textarea>          
+              <textarea id="chapost" class="form-control post" placeholder="Post a new challenge"></textarea>
             </div>
+
             <div class="count">
+
+              <input type="text" class="form-control url" placeholder="paste url">
+              <input type="text" class="form-control tag" placeholder="#tag1, #tag2, #tag3">
+
               <button type="button" class="btn btn-primary submitpost"></button>
-              <input id="fileupload" title="Add File" class="btn-default" type="file" name="files[]" data-filename-placement="inside" data-url="server/php/" multiple>
+                
+                <button type="button" class="btn btn-link imgurl pull-left">
+                  <span class="glyphicon glyphicon-camera"></span>
+                </button>
+
+                <button type="button" class="btn btn-link tagbtn pull-left">
+                  <span class="glyphicon glyphicon-tags"></span>
+                </button>
+
             </div>
             
           </form>

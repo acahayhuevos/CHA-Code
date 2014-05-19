@@ -8,17 +8,29 @@
     
     $(textareas).focus(function(e){
         //console.log(e)
-        temp = e.currentTarget.parentElement.parentElement.children[1];
         target = e.currentTarget;
+        temp = target.parentElement.parentElement.children[1];
 
         $(temp).fadeIn("slow");
         displayLength(target, temp);
-        $(e.currentTarget).focusout(function(){$(temp).fadeOut("slow");})
+        
+        
     })
 
-    $(textareas).on('paste', function(e) {
-        temp = e.currentTarget.parentElement.parentElement.children[1];
+
+    $(textareas).focusout(function(e){
+        
         target = e.currentTarget;
+        temp = target.parentElement.parentElement.children[1];
+        if ($(target).val() == ''){
+             $(temp).fadeOut("slow");
+        }
+    })
+
+
+    $(textareas).on('paste', function(e) {
+        target = e.currentTarget;
+        temp = target.parentElement.parentElement.children[1];
         setTimeout(function() {
             if (target.value.length > limit) {
                 target.value = target.value.substr(0, limit);
@@ -27,10 +39,28 @@
         }, 600);
     });
 
+    /*$(textareas).keyup(function(e){
+        target = e.currentTarget;
+        temp = e.currentTarget.parentElement.parentElement.children[1];
+        postags = target.parentElement.children[1];
+        var tags;
+        var t = $(target).val();
+        var t1 = t.split(' ');
+        var t2;
+        for (var i = t1.length - 1; i >= 0; i--) {
+            if(t1[i].indexOf('#') > -1)
+            {
+                $(t2).append(t1[i]);
+                console.log(t2)
+            }
+        };
+        //$(postags).html($(t2).replace(/#([^ ]*)/g,'<span class="label label-default">' +'#'+'$1</span>'));
+    })*/
 
     $(textareas).keydown(function(e) {
-        temp = e.currentTarget.parentElement.parentElement.children[1];
         target = e.currentTarget;
+        temp = target.parentElement.parentElement.children[1];
+
         switch (e.keyCode) {
         case 8:
             // backspace
@@ -53,8 +83,11 @@
             }
         }
 
-        displayLength(target, temp);
+        //taglist = $(target).val().replace(/#([^ ]*)/g,'#<span class="label label-default">' +'#'+'$1</span>')
 
+
+
+        displayLength(target, temp);
 
         });
 
@@ -65,7 +98,7 @@
   
 
 function displayLength(t, temp) {
-    var temp2 = temp.children[0];
+    var temp2 = temp.children[2];
     if (t.value.length > limit) {
         $(temp2).text('Too long!');
     } else {

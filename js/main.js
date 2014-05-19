@@ -31,10 +31,12 @@ $(document).ready(function(){
 
 
 	$count = $('.count')
+	urlinput = $('.url');
+	tag = $('.tag');
 
 	$count.hide();
-    $('input[type=file]').bootstrapFileInput();
-    $('.file-inputs').bootstrapFileInput();
+	$(urlinput).hide();
+	$(tag).hide();
 
     $.getScript("js/input.js")
 
@@ -44,18 +46,39 @@ $.getScript("js/post.js")
 
 //https://github.com/blueimp/jQuery-File-Upload/wiki/Basic-plugin
 
-// FILE UPLOAD
+// TAG BTN
 
-$(function () {
-    $('#fileupload').fileupload({
-        dataType: 'json',
-        done: function (e, data) {
-            $.each(data.result.files, function (index, file) {
-                $('<p/>').text(file.name).appendTo(document.body);
-            })
-        }
-    })
-   });
+	tagBtn = $('.tagbtn');
+
+	$(tagBtn).click(function(e){
+
+		target = e.currentTarget;
+		parent = target.parentElement;
+		input = parent.children[1];
+
+		$(parent.children[0]).hide("slow");
+		$(input).fadeIn("slow");
+
+	})
+
+// IMAGE URL BTN
+
+	imgBtn = $('.imgurl');
+
+	$(imgBtn).click(function(e){
+		target = e.currentTarget;
+		parent = target.parentElement;
+		input = parent.children[0];
+
+		$(parent.children[1]).hide("slow");
+		$(input).fadeIn("slow");
+
+
+	})
+
+function toggleVisibility(visibility, type, value ){
+	
+}
 
 function toggleReplies(visibility){
 	replies = $('.replies');
@@ -76,7 +99,7 @@ function sendVote(post_id, _value){
 	$.ajax({
 		type: "POST",
 		url:'php/post.php',
-		data: {user: "1", postid: post_id, text: "", type: _value}
+		data: {user: "1", postid: post_id, text: "", image: "", type: _value}
 		}).done(function(e){
 
 			console.log("sent");
