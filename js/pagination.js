@@ -12,7 +12,7 @@
 			                            // displayed. You can change this if you want.
 			delay   : 500, // When you scroll down the posts will load after a delayed amount of time.
 			               // This is mainly for usability concerns. You can alter this as you see fit
-			scroll  : true // The main bit, if set to false posts will not load as the user scrolls. 
+			scroll  : true, // The main bit, if set to false posts will not load as the user scrolls. 
 			               // but will still load if the user clicks.
 		}
 		
@@ -36,7 +36,7 @@
 			else $initmessage = '';
 			
 			// Append custom messages and extra UI
-			$this.append('<div class="_content"></div><div class="loading-bar">'+$initmessage+'</div>');
+			$this.append('<div class="_content" style="display:none;"></div><div class="loading-bar">'+$initmessage+'</div>');
 			
 			function getData() {
 				
@@ -63,10 +63,15 @@
 						    
 						// Append the data to the content div
 					   	$this.find('._content').append(data);
+					   	$this.find('._content').fadeIn("slow");
 
 					   	// Refresh inputs code
 					   	
-					   	refreshjs();
+					    $.getScript("js/input.js")
+						//$.getScript("js/post.js")
+						$.getScript("js/post_2.js")
+						$.getScript("js/replies.js")
+						$.getScript("js/vote.js")
 						
 						// No longer busy!	
 						busy = false;

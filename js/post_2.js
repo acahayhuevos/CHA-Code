@@ -1,7 +1,18 @@
 
-	submitPost = $('.submitpost')
-	username = "PussyCat";
-	avatar = "images/u1.jpg"
+	$.ajax({
+	  type: "POST",
+	  url: "php/session.php",
+	  data: { type: "1" }
+	})
+	  .done(function( e ) {
+	    	//alert( "Data Saved: " + e );
+			t = jQuery.parseJSON(e);
+			username = t["result"][0].username;
+			userid = t["result"][0].userid;
+			avatar = t["result"][0].avatar;
+	  });
+
+	 submitPost = $('.submitpost')
 
 	$(submitPost).click(function(e){
 		//console.log(e)
@@ -68,8 +79,8 @@
 			//refreshjs();
 
 			$.getScript("js/input.js")
-			$.getScript("js/replies.js")
-			$.getScript("js/vote.js")
+			//$.getScript("js/replies.js")
+			//$.getScript("js/vote.js")
 
             toggleReplies(true);
 

@@ -28,6 +28,7 @@ function refreshjs()
 {
 	$.getScript("js/input.js")
 	$.getScript("js/post.js")
+	$.getScript("js/post_2.js")
 	$.getScript("js/replies.js")
 	$.getScript("js/vote.js")
 

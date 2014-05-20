@@ -2,20 +2,36 @@
 <?php
 
 require 'config.php';
+session_start();
 
 // ---- pagination ----->
 $offset = is_numeric($_POST['offset']) ? $_POST['offset'] : die();
 $postnumbers = is_numeric($_POST['number']) ? $_POST['number'] : die();
 
-$result = mysql_query("SELECT * FROM post WHERE 1 ORDER BY id DESC LIMIT ".$postnumbers." OFFSET ".$offset);
+if(isset($_SESSION['type'])) {
+
+    $type = $_SESSION['type'];
+
+    if ($type == 0) {
+
+        $_query = "SELECT * FROM post WHERE 1 ORDER BY id DESC LIMIT ".$postnumbers." OFFSET ".$offset;
+
+    }elseif($type == 1){
+
+        $tag = $_SESSION['tag'];
+        $_query = "SELECT tag.*, post.* FROM tag, post WHERE post.id = tag.post_id AND tag.tag = '$tag' ORDER BY post.id DESC LIMIT ".$postnumbers." OFFSET ".$offset;
+    
+    }
+} 
+
+$result = mysql_query($_query);
 
 if (!$result) {
   die('Invalid query: ' . mysql_error());
 }
 
 /*
-SELECT `post`.*, `tag`.*
-FROM `tag`, `post` WHERE `post`.`id` = `tag`.`post_id`
+SELECT post.*, tag.* FROM tag, post WHERE post.id = tag.post_id
 ORDER BY `post`.`id` DESC 
 */
 
@@ -54,7 +70,7 @@ while ($row = mysql_fetch_array($result)) {
                 echo "</div><div class='tags'>";
 
                 while ($row1 = mysql_fetch_array($result1)) {
-                    echo "<span class='label label-default'>"."#".$row1['tag']."</span>";
+                    echo "<span class='label label-default'><a href='query.php?tag=".$row1['tag']."'>"."#".$row1['tag']."</a></span>";
                 }
 
                 echo "</div><div id='vote' class=".$row["id"].">"

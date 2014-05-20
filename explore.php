@@ -10,9 +10,7 @@
 
           $_SESSION['username'] = "Putin" ;
           $_SESSION['userid'] = "2" ;
-          $_SESSION['avatar'] = "images/u2.jpg";
-
-          $_SESSION['type'] = "0";
+          $_SESSION['avatar'] = "images/u2.jpg" ;
  
         ?>
 
@@ -92,9 +90,9 @@
             <div class="count">
 
               <input type="text" class="form-control url" placeholder="paste url">
-              <input type="text" class="form-control tag" placeholder="#tag1 #tag2 #tag3">
+              <input type="text" class="form-control tag" placeholder="#tag1, #tag2, #tag3">
 
-              <button type="button" class="btn btn-primary submitpost0"></button>
+              <button type="button" class="btn btn-primary submitpost"></button>
                 
                 <button type="button" class="btn btn-link imgurl pull-left">
                   <span class="glyphicon glyphicon-camera"></span>

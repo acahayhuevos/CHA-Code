@@ -7,18 +7,20 @@
 
         <?php
           session_start();
+          $tag = $_GET["tag"];
 
-          $_SESSION['username'] = "Putin" ;
-          $_SESSION['userid'] = "2" ;
-          $_SESSION['avatar'] = "images/u2.jpg";
+          $_SESSION['type'] = "1";
+          $_SESSION['tag'] = $_GET["tag"];
 
-          $_SESSION['type'] = "0";
- 
         ?>
 
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>CHA!</title>
+
+        <?php
+        echo "<title>CHA! | ".$tag."</title>";
+        ?>
+
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -81,6 +83,10 @@
 
           </div></nav>
 
+
+
+        <div class="container wrap">
+
         <!-- POST FORM -->
 
         <div class="container wrap">
@@ -92,7 +98,7 @@
             <div class="count">
 
               <input type="text" class="form-control url" placeholder="paste url">
-              <input type="text" class="form-control tag" placeholder="#tag1 #tag2 #tag3">
+              <?php echo "<input type='text' class='form-control tag' placeholder='#".$tag."'>" ?>
 
               <button type="button" class="btn btn-primary submitpost0"></button>
                 
@@ -110,12 +116,12 @@
 
         <!-- CONTENT FORM -->
 
-        <section id="timeline">
+         <?php echo "<h1 style='margin-bottom:20px;'><span class='label label-default'>#".$tag."</span></h1>"; ?>
+          <section id="timeline">
 
-        </section>
-
+          </section>
       
-      </div>
+        </div>
         
       </div> 
 
@@ -130,30 +136,3 @@
         <script src="js/vendor/jquery.ui.widget.js"></script>
     </body>
 </html>
-
-<!--
-
-          <div class="replay well">
-            
-            <aside>
-              <div class="avatar2">
-                <img src="images/u2.jpg" class="img-circle img-responsive" alt="username">
-              </div>
-            </aside>
-
-            <div class="content">
-              <p>I Just did it, it was fucking awesome dude, you had to see their faces while i was doing it, it was like the bes thing ever, i love this page!</p>
-
-              <div id="vote">
-                <button type="submit" class="btn btn-link vote">
-                  <span class="glyphicon glyphicon-thumbs-up"></span>
-                </button>
-                <button type="submit" class="btn btn-link vote">
-                  <span class="glyphicon glyphicon-thumbs-down"></span>
-                </button>
-              </div>
-
-            </div>
-          </div>
-
-  -->
