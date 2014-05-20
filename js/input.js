@@ -7,7 +7,7 @@
      limit = 140;
     
     $(textareas).focus(function(e){
-        //console.log(e)
+        console.log(e)
         target = e.currentTarget;
         temp = target.parentElement.parentElement.children[1];
 
@@ -39,24 +39,6 @@
         }, 600);
     });
 
-    /*$(textareas).keyup(function(e){
-        target = e.currentTarget;
-        temp = e.currentTarget.parentElement.parentElement.children[1];
-        postags = target.parentElement.children[1];
-        var tags;
-        var t = $(target).val();
-        var t1 = t.split(' ');
-        var t2;
-        for (var i = t1.length - 1; i >= 0; i--) {
-            if(t1[i].indexOf('#') > -1)
-            {
-                $(t2).append(t1[i]);
-                console.log(t2)
-            }
-        };
-        //$(postags).html($(t2).replace(/#([^ ]*)/g,'<span class="label label-default">' +'#'+'$1</span>'));
-    })*/
-
     $(textareas).keydown(function(e) {
         target = e.currentTarget;
         temp = target.parentElement.parentElement.children[1];
@@ -83,19 +65,9 @@
             }
         }
 
-        //taglist = $(target).val().replace(/#([^ ]*)/g,'#<span class="label label-default">' +'#'+'$1</span>')
-
-
-
         displayLength(target, temp);
 
         });
-
-    /*$(button).click(function(e){
-        var temp = e.currentTarget.parentElement.parentElement.children[1];
-       $(temp).fadeOut("slow")
-    })*/
-  
 
 function displayLength(t, temp) {
     var temp2 = temp.children[2];
@@ -106,6 +78,36 @@ function displayLength(t, temp) {
 
     }
 }
+
+// TAG BTN
+
+    tagBtn = $('.tagbtn');
+
+    $(tagBtn).click(function(e){
+
+        target = e.currentTarget;
+        parent = target.parentElement;
+        input = parent.children[1];
+
+        $(parent.children[0]).hide("slow");
+        $(input).fadeIn("slow");
+
+    })
+
+// IMAGE URL BTN
+
+    imgBtn = $('.imgurl');
+
+    $(imgBtn).click(function(e){
+        target = e.currentTarget;
+        parent = target.parentElement;
+        input = parent.children[0];
+
+        $(parent.children[1]).hide("slow");
+        $(input).fadeIn("slow");
+
+
+    })
 
 
 

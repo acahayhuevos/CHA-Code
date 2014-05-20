@@ -19,7 +19,6 @@
         </style>
         <link rel="stylesheet" href="css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="css/main.css">
-
         <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
     </head>
     <body>
@@ -65,17 +64,9 @@
                         <span class="icon-bar"></span>
                   </button>
                   <a class="navbar-brand" href="#">CHA!</a>
-            </div>
-
-
-      </div>
-        </nav>
-        <!--/.nav-collapse -->
+            </div></div></nav>
 
         <!-- POST FORM -->
-
-        <!-- Falta la posibilidad de subir img 
-        CHECK http://blueimp.github.io/jQuery-File-Upload/basic-plus.html -->
 
         <div class="container wrap">
           <form role="form" action="post.php" method="POST">
@@ -102,13 +93,9 @@
             
           </form>
 
-        <!--/ POST FORM -->
-
         <!-- CONTENT FORM -->
 
         <section id="timeline">
-
-          <?php require 'php/load.php' ?>
 
         </section>
 
@@ -124,11 +111,8 @@
 
         <script src="js/vendor/bootstrap.min.js"></script>
         <script src="js/main.js"></script>
-        
+        <script src="js/pagination.js"></script>
         <script src="js/vendor/jquery.ui.widget.js"></script>
-        <script src="js/jquery.iframe-transport.js"></script>
-        <script src="js/jquery.fileupload.js"></script>
-        <script src="js/file-input.js"></script>
     </body>
 </html>
 

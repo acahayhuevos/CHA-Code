@@ -6,13 +6,15 @@
   $query = "SELECT * FROM user, replay WHERE replay.postid =' $postid' AND replay.userid = user.id";
   $result = mysql_query($query);
 
-	/*echo '{"result":[';
+	echo '{"result":[';
 
 	while ($row = mysql_fetch_array($result)) {
 
-	  $jtemp['nickname'] = $row['nickname'];
+	  $jtemp['id'] = $row['id'];
+      $jtemp['nickname'] = $row['nickname'];
 	  $jtemp['avatar'] = $row['avatar'];
 	  $jtemp['content'] = $row['content'];
+      $jtemp['img'] = $row['img'];
 	  $jtemp['likes'] = $row['likes'];
 	  $jtemp['fucks'] = $row['fucks'];
 
@@ -20,9 +22,9 @@
 	  echo ',';
 	}
 
-	echo '0]}';*/
+	echo '0]}';
 
-    while($row3 = mysql_fetch_array($result3)){
+    /*while($row3 = mysql_fetch_array($result3)){
 
             echo "<div class='replay well'>"            
             ."<aside>"
@@ -42,6 +44,6 @@
             ."</button>"
             ."</button></div></div></div></article>";
 
-        }
+        }*/
 
 ?>

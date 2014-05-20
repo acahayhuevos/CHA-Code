@@ -1,10 +1,14 @@
 
 <?php
 
-require 'php/config.php';
+require 'config.php';
 
-$query = "SELECT * FROM post WHERE 1 ORDER BY id DESC";
-$result = mysql_query($query);
+// ---- pagination ----->
+$offset = is_numeric($_POST['offset']) ? $_POST['offset'] : die();
+$postnumbers = is_numeric($_POST['number']) ? $_POST['number'] : die();
+
+$result = mysql_query("SELECT * FROM post WHERE 1 ORDER BY id DESC LIMIT ".$postnumbers." OFFSET ".$offset);
+
 if (!$result) {
   die('Invalid query: ' . mysql_error());
 }
@@ -68,15 +72,15 @@ while ($row = mysql_fetch_array($result)) {
                 ."<form role='form'>"
                 ."<div class='form-group'>"
                 ."<textarea id='".$row["id"]."' class='form-control post' placeholder='Leave a comment or replay'></textarea></div>"  //id=chapost       
-                ."<div class='count'>"
+                ."<div class='count' style='display:none;'>"
                 ."<input type='text' class='form-control url' placeholder='paste url' style='display: none;'>"
                 ."<div></div>"
                 ."<button type='button' class='btn btn-primary submitpost'></button>"
                 ."<button type='button' class='btn btn-link imgurl pull-left'>"
                 ."<span class='glyphicon glyphicon-camera'></span>"
-                ."</button></div></form>";
+                ."</button></div></form><div id='repliesContainer' style='display:none;'></div>";
 
-            $query3 = "SELECT * FROM user, replay WHERE replay.postid =' $postid' AND replay.userid = user.id";
+            /* $query3 = "SELECT * FROM user, replay WHERE replay.postid =' $postid' AND replay.userid = user.id";
             $result3 = mysql_query($query3);
 
                 while($row3 = mysql_fetch_array($result3)){
@@ -102,11 +106,12 @@ while ($row = mysql_fetch_array($result)) {
                         ."</button>"
                         ."</button></div></div></div>";
 
-                    }
+                    } */
 
                     echo "</div></article>";
 
       }
+
 }
 
 ?>
