@@ -7,16 +7,12 @@
 
         <?php
           session_start();
-
-          $_SESSION['username'] = "Putin" ;
-          $_SESSION['userid'] = "2" ;
-          $_SESSION['avatar'] = "images/u2.jpg" ;
- 
+          $_SESSION['type'] = "";
         ?>
 
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>CHA!</title>
+        <title>CHA! Explore</title>"
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -54,8 +50,8 @@
           </form>
 
             <ul class="nav navbar-nav">
-              <li class="active"><a href="#"><span class="glyphicon glyphicon-tower"></span> Home</a></li>
-              <li><a href="#about"><span class="glyphicon glyphicon-plane"></span> Explore</a></li>
+              <li><a href="index.php"><span class="glyphicon glyphicon-tower"></span> Home</a></li>
+              <li class="active"><a href="explore.php"><span class="glyphicon glyphicon-plane"></span> Explore</a></li>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> Me <b class="caret"></b></a>
                 <ul class="dropdown-menu">
@@ -79,41 +75,31 @@
 
           </div></nav>
 
-        <!-- POST FORM -->
 
         <div class="container wrap">
-          <form role="form" action="post.php" method="POST">
-            <div class="form-group">
-              <textarea id="chapost" class="form-control post" placeholder="Post a new challenge"></textarea>
-            </div>
 
-            <div class="count">
+        <h1>explore</h1>
 
-              <input type="text" class="form-control url" placeholder="paste url">
-              <input type="text" class="form-control tag" placeholder="#tag1, #tag2, #tag3">
+          <section id="tagCloud" style="display:none;">
 
-              <button type="button" class="btn btn-primary submitpost"></button>
-                
-                <button type="button" class="btn btn-link imgurl pull-left">
-                  <span class="glyphicon glyphicon-camera"></span>
-                </button>
+              <?php 
+                require 'php/config.php';
+                $_query = "SELECT * FROM tag WHERE 1 ORDER BY id DESC";
+                $result = mysql_query($_query);
+                if (!$result) {
+                  die('Invalid query: ' . mysql_error());
+                }
+                while ($row = mysql_fetch_array($result)) {
+                  echo "<h2 style='display:inline-block;'><span class='label label-default'><a href='query.php?tag=".$row['tag']."'>"."#".$row['tag']."</a></span></h2>";
+                }
 
-                <button type="button" class="btn btn-link tagbtn pull-left">
-                  <span class="glyphicon glyphicon-tags"></span>
-                </button>
+              ?>
 
-            </div>
-            
-          </form>
+          </section>
 
-        <!-- CONTENT FORM -->
-
-        <section id="timeline">
-
-        </section>
-
+           
       
-      </div>
+        </div>
         
       </div> 
 
@@ -121,37 +107,10 @@
 
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
-
+        <script type="text/javascript">
+              $('#tagCloud').fadeIn("slow");
+          </script>
         <script src="js/vendor/bootstrap.min.js"></script>
-        <script src="js/main.js"></script>
-        <script src="js/pagination.js"></script>
         <script src="js/vendor/jquery.ui.widget.js"></script>
     </body>
 </html>
-
-<!--
-
-          <div class="replay well">
-            
-            <aside>
-              <div class="avatar2">
-                <img src="images/u2.jpg" class="img-circle img-responsive" alt="username">
-              </div>
-            </aside>
-
-            <div class="content">
-              <p>I Just did it, it was fucking awesome dude, you had to see their faces while i was doing it, it was like the bes thing ever, i love this page!</p>
-
-              <div id="vote">
-                <button type="submit" class="btn btn-link vote">
-                  <span class="glyphicon glyphicon-thumbs-up"></span>
-                </button>
-                <button type="submit" class="btn btn-link vote">
-                  <span class="glyphicon glyphicon-thumbs-down"></span>
-                </button>
-              </div>
-
-            </div>
-          </div>
-
-  -->

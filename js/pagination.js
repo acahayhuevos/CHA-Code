@@ -54,6 +54,7 @@
 						
 					// If there is no data returned, there are no more posts to be shown. Show error
 					if(data == "") { 
+						alert("no data")
 						$this.find('.loading-bar').html($settings.error);	
 					}
 					else {
@@ -65,16 +66,19 @@
 					   	$this.find('._content').append(data);
 					   	$this.find('._content').fadeIn("slow");
 
+					   	// No longer busy!	
+						busy = false;
+
 					   	// Refresh inputs code
 					   	
 					    $.getScript("js/input.js")
-						//$.getScript("js/post.js")
+						$.getScript("js/post.js")
 						$.getScript("js/post_2.js")
 						$.getScript("js/replies.js")
-						$.getScript("js/vote.js")
-						
-						// No longer busy!	
-						busy = false;
+
+						voteBtn = $(".vote");
+						updateVoteBtn(voteBtn);
+
 					}	
 						
 				});

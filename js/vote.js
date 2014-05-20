@@ -12,8 +12,9 @@ function sendVote(post_id, _value){
 
 // VOTE BUTTONS
 
-voteBtn = $(".vote");
-function updateVoteBtn(btn){}
+//voteBtn = $(".vote");
+
+function updateVoteBtn(voteBtn){
 
     $(voteBtn).one("click", function(e){
 
@@ -47,3 +48,4 @@ function updateVoteBtn(btn){}
                 }
             }
     })
+}

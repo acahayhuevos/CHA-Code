@@ -8,51 +8,17 @@
 	/* NAV */
 
    .navbar-default{
-   	background-image: none;
-   	background-color: #FFD000;
-   	border-color: #B29724;
+      background-image: none;
+      background-color: #FFD000;
+      color: black;
+   }
+
+   .navbar-header{
+      font-weight: bold;
    }
 
    input.form-control{
    	border-radius: 5px;
-   }
-
-   .navbar-default .navbar-brand{
-   	color: black;
-   	font-weight: bold;
-   }
-
-   .btn-link{
-   	color: black;
-   }
-
-   .active>a.foo{
-   	background-image: none;
-   	background-color: #B29724;
-   }
-
-   .navbar-default .navbar-nav>.active>a{
-   	background-image: none;
-   	background-color: #FFD000;
-      -webkit-box-shadow: none;
-      box-shadow: none;
-   }
-
-   .navbar-default .navbar-nav>.active>a:hover{
-   	background-image: none;
-   	background-color: #FFD000;
-   }
-
-   .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus{
-   	background-color: #D7B52A;
-   }
-
-   .navbar-default .navbar-toggle{
-   	background-color: white;
-   }
-
-   .navbar-default .navbar-nav>li>a {
-      color: black;
    }
 
 
@@ -77,13 +43,53 @@
    	background-color: gray;
    }
 
+   .label>a{
+     color: white;
+     text-decoration: none;
+   }
+
+   .label>a:hover{
+     color: white;
+     text-decoration: none;
+   }
+
+   .label:hover{
+      background-color: black;
+   }
+
+
    .btn-default{
       text-shadow: none;
    }
 
    .btn-primary{
       margin-right: 5px;
+      background-image: none;
    }
+
+   .btn-primary:hover{
+      background-image: #3B7DB5;
+   }
+
+   .btn-link{
+      color: black;
+      border-radius: 5px; 
+   }
+
+   .showreplies:hover{
+      border-width: 1px;
+      border-color: gray;
+   }
+
+   .btn-link:hover{
+      background-color: #E0E0E0;
+      text-decoration: none;
+      color: black;
+      border-radius: 5px; 
+
+   }
+
+
 
    .url, .tag{
       margin-bottom: 8px;
@@ -146,13 +152,11 @@
       margin-bottom: 8px;
       margin-right: 5px;
       border-color: #BBBBBB;
-      border-radius: 5px; 
    }
 
    .vote:hover{
       margin-bottom: 8px;
       border-color: #BBBBBB;
-      border-radius: 5px; 
    }
 
  

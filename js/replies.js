@@ -73,6 +73,15 @@ $(repliesBtn).click(function(e){
                 $(repliesContainer).fadeIn("slow");
                 $('.loading-replies').remove();
 
+                repliesContainer = parent.children[4];
+
+                for (var i = repliesContainer.children.length - 1; i >= 0; i--) {
+                    likes = repliesContainer.children[i].children[1].children[2].children[0];
+                    fucks = repliesContainer.children[i].children[1].children[2].children[1];
+                    updateVoteBtn(likes);
+                    updateVoteBtn(fucks);
+                };
+
         } 
         });
 
