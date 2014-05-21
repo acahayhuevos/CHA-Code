@@ -1,0 +1,175 @@
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+	/* NAV */
+
+   .navbar-default{
+   	background-image: none;
+   	background-color: #FFD000;
+   	border-color: #B29724;
+   }
+
+   input.form-control{
+   	border-radius: 5px;
+   }
+
+   .navbar-default .navbar-brand{
+   	color: black;
+   	font-weight: bold;
+   }
+
+   .btn-link{
+   	color: black;
+   }
+
+   .active>a.foo{
+   	background-image: none;
+   	background-color: #B29724;
+   }
+
+   .navbar-default .navbar-nav>.active>a{
+   	background-image: none;
+   	background-color: #FFD000;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+   }
+
+   .navbar-default .navbar-nav>.active>a:hover{
+   	background-image: none;
+   	background-color: #FFD000;
+   }
+
+   .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus{
+   	background-color: #D7B52A;
+   }
+
+   .navbar-default .navbar-toggle{
+   	background-color: white;
+   }
+
+   .navbar-default .navbar-nav>li>a {
+      color: black;
+   }
+
+
+   /* BODY */
+
+   body .wrap{
+   	margin-top: 20px;
+   	width: 600px;
+   }@media (max-width:600px){ body .wrap{width: 400px}}@media (max-width:400px){ body .wrap{width: 300px}}
+
+   .loading-bar, .loading-replies{
+      text-align: center;
+   }
+
+   .count{
+   	margin-top: -8px;
+      margin-bottom: 8px;
+      text-align: right;
+   }
+
+   .badge{
+   	background-color: gray;
+   }
+
+   .btn-default{
+      text-shadow: none;
+   }
+
+   .btn-primary{
+      margin-right: 5px;
+   }
+
+   .url, .tag{
+      margin-bottom: 8px;
+   }
+
+
+
+   section{
+   	border-width: 1px;
+   	border-radius: 5px;
+   }
+
+   .well{
+      border-radius: 5px;
+      box-shadow: none;
+      -webkit-box-shadow: none;
+      background-image: none;
+   }
+
+   .tags{
+      margin-top: 8px;
+      margin-bottom: 8px;
+   }
+
+   .label{
+      margin-right: 5px;
+   }
+
+   .reply{
+      background-color: white;
+   }
+
+   /*Avatar no es responsive para res. movil*/
+
+   .avatar{
+      position: absolute;
+      margin-left: -60px;
+      margin-top: 5px;
+   }
+
+   .avatar2{
+      float: left;
+   }
+
+   .avatar>img, .avatar2>img {
+      width: 50px;
+      height: 50px;
+   }
+
+   .username{
+      color: #959595;
+      font-weight: bold;
+   }
+
+   .content{
+      margin-left: 70px;
+   }
+
+   .vote, .showreplies{
+      margin-bottom: 8px;
+      margin-right: 5px;
+      border-color: #BBBBBB;
+      border-radius: 5px; 
+   }
+
+   .vote:hover{
+      margin-bottom: 8px;
+      border-color: #BBBBBB;
+      border-radius: 5px; 
+   }
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
