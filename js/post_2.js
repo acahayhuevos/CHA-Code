@@ -44,7 +44,7 @@
 		$.ajax({
 			type: "POST",
 			url:'php/post.php',
-			data: { user: userid, postid: post_id, text: content, image: img, type: 2}
+			data: { user: "1", postid: post_id, text: content, image: img, type: 2}
 			}).done(function(e){
 
 			// Clear text area
@@ -76,20 +76,11 @@
 
  			// Update variables
 
- 			_target = target.parentElement.parentElement.parentElement.children[5].children[1].children[2];
-			likes = _target.children[0];
-        	fucks = _target.children[1];
-
 			//refreshjs();
 
 			$.getScript("js/input.js")
 			//$.getScript("js/replies.js")
-
 			//$.getScript("js/vote.js")
-			//voteBtn = $(".vote");
-			 updateVoteBtn(likes);
-			 updateVoteBtn(fucks);
-
 
             toggleReplies(true);
 

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 20-05-2014 a las 21:03:39
+-- Tiempo de generación: 20-05-2014 a las 08:04:44
 -- Versión del servidor: 5.5.27
 -- Versión de PHP: 5.4.7
 
@@ -34,7 +34,7 @@ CREATE TABLE IF NOT EXISTS `post` (
   `likes` int(11) NOT NULL,
   `fucks` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=167 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=156 ;
 
 --
 -- Volcado de datos para la tabla `post`
@@ -55,8 +55,7 @@ INSERT INTO `post` (`id`, `content`, `userid`, `img`, `likes`, `fucks`) VALUES
 (71, 0x4461667470756e6b, 1, 'http://www.billboard.com/files/styles/promo_650/public/media/daft-punk-tron-650-430.jpg', 1, 1),
 (133, 0x576520617265207368696e696e672c20736179206d79206e616d6521, 1, 'http://static.guim.co.uk/sys-images/guardian/Pix/pictures/2011/10/25/1319533374187/Florence-And-The-Machine-005.jpg', 11, 45),
 (152, 0x5368652069732061207665727920676f6f642073696e6765722c2069206c6f766520686572, 2, 'http://static.guim.co.uk/sys-images/Guardian/Pix/pictures/2010/1/24/1264355915735/florence-and-the-machine--001.jpg', 9, 11),
-(155, 0x4c6f6f6b20617420746869732073747570696420646f67, 2, 'http://cdn.buzznet.com/assets/users16/eavie/default/stupid-dog--large-msg-134404025925.jpg?post_id=106350520', 46, 39),
-(166, 0x49206c696b65207468652077617920796f75206c6965, 2, '', 2, 0);
+(155, 0x4c6f6f6b20617420746869732073747570696420646f67, 2, 'http://cdn.buzznet.com/assets/users16/eavie/default/stupid-dog--large-msg-134404025925.jpg?post_id=106350520', 31, 31);
 
 -- --------------------------------------------------------
 
@@ -73,7 +72,7 @@ CREATE TABLE IF NOT EXISTS `replay` (
   `likes` int(11) NOT NULL,
   `fucks` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=121 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=82 ;
 
 --
 -- Volcado de datos para la tabla `replay`
@@ -141,7 +140,7 @@ INSERT INTO `replay` (`id`, `content`, `postid`, `userid`, `img`, `likes`, `fuck
 (59, 0x54686973206973207665727920636f6f6c206d656e, 152, 2, '', 1, 1),
 (60, 0x7965616821, 152, 2, '', 0, 1),
 (61, 0x6cc383c2b16c6b787a78, 154, 1, '', 1, 0),
-(62, 0x49206c6f766520697421, 155, 1, '', 1, 0),
+(62, 0x49206c6f766520697421, 155, 1, '', 0, 0),
 (63, 0x42616461737320646f672c206d79206c6567656e64, 155, 1, '', 0, 0),
 (64, 0x476f6f64206c75636b206d656e, 155, 1, '', 0, 0),
 (65, 0x48756861, 155, 1, '', 0, 0),
@@ -160,46 +159,7 @@ INSERT INTO `replay` (`id`, `content`, `postid`, `userid`, `img`, `likes`, `fuck
 (78, 0x6a756a756a75, 155, 1, '', 0, 0),
 (79, 0x6c6f6c6f, 155, 1, '', 0, 0),
 (80, 0x476f72666f6e61, 152, 1, '', 1, 0),
-(81, 0x46696669, 152, 1, '', 0, 0),
-(82, 0x486f6c61, 155, 1, '', 0, 0),
-(83, 0x486f6c61, 155, 1, '', 0, 0),
-(84, 0x486f6c61, 155, 1, '', 0, 0),
-(85, 0x486f6c61, 155, 1, '', 0, 0),
-(86, 0x486f6c61, 155, 1, '', 0, 0),
-(87, 0x486f6c61, 155, 1, '', 0, 0),
-(88, 0x486f6c61617364, 155, 1, '', 0, 0),
-(89, 0x486f6c61617364, 155, 1, '', 0, 0),
-(90, 0x6c6bc383c2b16c6b646c736b64c383c2b173, 155, 1, '', 0, 0),
-(91, 0x612077696c64207265706c79, 156, 1, '', 2, 1),
-(92, 0x7bc383c2b1787a0a, 156, 1, '', 0, 0),
-(93, 0x6c6b786c73616b6473c383c2b1736cc383c2b16c, 156, 1, '', 1, 1),
-(94, 0x75736572206964, 156, 2, '', 1, 0),
-(95, 0x687961, 156, 2, '', 1, 0),
-(96, 0x6c6b6cc383c2b16bc383c2b16c, 158, 2, '', 1, 0),
-(97, 0x6cc383c2b16cc383c2b1, 155, 2, '', 0, 0),
-(98, 0x6cc383c2b16cc383c2b1, 155, 2, '', 0, 0),
-(99, 0x6c6b6c646b736c, 155, 2, '', 0, 0),
-(100, 0x6c6b6c646b736c, 155, 2, '', 0, 0),
-(101, 0x6c6b6c646b736c, 155, 2, '', 0, 0),
-(102, 0x6c6b6c646b736c, 155, 2, '', 0, 0),
-(103, 0x6c6b6c6b6c6bc383c2b1, 155, 2, '', 0, 0),
-(104, 0x6c6b6c6b6c6bc383c2b1, 155, 2, '', 0, 0),
-(105, 0x6c6b6c6b6c6bc383c2b1, 155, 2, '', 0, 0),
-(106, 0x6c6b6c6b6c6bc383c2b1, 155, 2, '', 0, 0),
-(107, 0x6c6b6c6b6c6bc383c2b1, 155, 2, '', 0, 0),
-(108, 0x6c6b6c6b6c6bc383c2b1, 155, 2, '', 0, 0),
-(109, 0x616cc383c2b16b736c73616473, 159, 2, '', 1, 0),
-(110, 0xc383c2b16c6b6173646c73, 161, 2, '', 1, 0),
-(111, 0x6a756a75, 162, 2, '', 1, 0),
-(112, 0x48756c61, 155, 2, '', 0, 0),
-(113, 0x48756c61, 155, 2, '', 0, 0),
-(114, 0xc383c2b16cc383c2b16cc383c2b17361, 155, 2, '', 0, 0),
-(115, 0xc383c2b16cc383c2b16cc383c2b17361, 155, 2, '', 0, 0),
-(116, 0x6c2c6d2e2c6d2c, 165, 2, '', 0, 0),
-(117, 0x2e2c6d2c2e, 155, 2, '', 0, 0),
-(118, 0x2e2c6d2c2e, 155, 2, '', 0, 0),
-(119, 0x467566756661, 155, 2, '', 0, 1),
-(120, 0x4a75737461762047756e67, 166, 2, '', 1, 0);
+(81, 0x46696669, 152, 1, '', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -212,7 +172,7 @@ CREATE TABLE IF NOT EXISTS `tag` (
   `tag` varchar(100) COLLATE utf8_bin NOT NULL,
   `post_id` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=110 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=101 ;
 
 --
 -- Volcado de datos para la tabla `tag`
@@ -236,11 +196,13 @@ INSERT INTO `tag` (`id`, `tag`, `post_id`) VALUES
 (43, 'yolo', 66),
 (44, 'yala', 66),
 (45, 'yale', 66),
+(46, '', 67),
 (47, 'music', 68),
 (48, 'trythis', 68),
 (49, 'lol', 68),
 (50, 'music', 69),
 (51, 'dp', 69),
+(52, '', 70),
 (53, 'image', 71),
 (54, 'music', 71),
 (55, 'daftpunk', 71),
@@ -259,15 +221,36 @@ INSERT INTO `tag` (`id`, `tag`, `post_id`) VALUES
 (68, 'ola', 78),
 (69, 'lolo', 79),
 (70, '123', 79),
+(71, '', 80),
+(72, '', 97),
 (73, 'yolo', 98),
+(74, '', 99),
+(75, '', 118),
+(76, '', 122),
+(77, '', 124),
+(78, '', 132),
 (79, 'florence', 133),
+(80, '', 134),
+(81, '', 136),
+(82, '', 137),
+(83, '', 138),
+(84, '', 139),
+(85, '', 140),
+(86, '', 141),
+(87, '', 142),
 (88, 'gogog', 143),
+(89, '', 144),
+(90, '', 145),
+(91, '', 146),
+(92, '', 149),
+(93, '', 150),
+(94, '', 151),
 (95, 'florence', 152),
+(96, '', 153),
+(97, '', 154),
 (98, 'yolo', 155),
 (99, 'dog', 155),
-(100, 'stupid', 155),
-(108, 'liar', 166),
-(109, 'lie', 166);
+(100, 'stupid', 155);
 
 -- --------------------------------------------------------
 

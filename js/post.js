@@ -72,7 +72,7 @@
 				var tostr = [];
 				for (var i = 0; i < a.length; i++) {
 				var _tag = a[i].substr(1, a[i].length);
-				tostr[i] = "<span class='label label-default'><a href='query.php?tag=" + _tag +"'>"."#" + _tag + "</a></span>";
+				tostr[i] = "<span class='label label-default'>" + "#" + _tag + "</span>";
 				}
 
 				var strtags = tostr.join('');
@@ -101,16 +101,10 @@
                 +"</button></div></form><div id='repliesContainer' style='display:none;'></div></div></article>");			
 			
 			// Update variables
-		_target = $('.submitpost')[0];
-		likes = _target.parentElement.parentElement.parentElement.children[2].children[0];
-        fucks = _target.parentElement.parentElement.parentElement.children[2].children[1];
 
 		$.getScript("js/input.js")
-		//$.getScript("js/vote.js")
-		updateVoteBtn(likes);
-		updateVoteBtn(fucks);
-		
-		$.getScript("js/post_2.js");
+		$.getScript("js/vote.js")
+		//$.getScript("js/post_2.js");
 		//$.getScript("js/replies.js")
 		
 

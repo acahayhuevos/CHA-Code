@@ -18,7 +18,7 @@
 
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>CHA! home</title>
+        <title>CHA!</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -56,8 +56,8 @@
           </form>
 
             <ul class="nav navbar-nav">
-              <li class="active"><a href="index.php"><span class="glyphicon glyphicon-tower"></span> Home</a></li>
-              <li><a href="explore.php"><span class="glyphicon glyphicon-plane"></span> Explore</a></li>
+              <li class="active"><a href="#"><span class="glyphicon glyphicon-tower"></span> Home</a></li>
+              <li><a href="#about"><span class="glyphicon glyphicon-plane"></span> Explore</a></li>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> Me <b class="caret"></b></a>
                 <ul class="dropdown-menu">
@@ -126,8 +126,34 @@
 
         <script src="js/vendor/bootstrap.min.js"></script>
         <script src="js/main.js"></script>
-        <script src="js/vote.js"></script>
         <script src="js/pagination.js"></script>
         <script src="js/vendor/jquery.ui.widget.js"></script>
     </body>
 </html>
+
+<!--
+
+          <div class="replay well">
+            
+            <aside>
+              <div class="avatar2">
+                <img src="images/u2.jpg" class="img-circle img-responsive" alt="username">
+              </div>
+            </aside>
+
+            <div class="content">
+              <p>I Just did it, it was fucking awesome dude, you had to see their faces while i was doing it, it was like the bes thing ever, i love this page!</p>
+
+              <div id="vote">
+                <button type="submit" class="btn btn-link vote">
+                  <span class="glyphicon glyphicon-thumbs-up"></span>
+                </button>
+                <button type="submit" class="btn btn-link vote">
+                  <span class="glyphicon glyphicon-thumbs-down"></span>
+                </button>
+              </div>
+
+            </div>
+          </div>
+
+  -->
