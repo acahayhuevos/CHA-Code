@@ -7,11 +7,6 @@
 
         <?php
           session_start();
-
-          $_SESSION['username'] = "Putin" ;
-          $_SESSION['userid'] = "2" ;
-          $_SESSION['avatar'] = "images/u2.jpg";
-
           $_SESSION['type'] = "0";
  
         ?>
