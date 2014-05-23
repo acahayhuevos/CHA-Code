@@ -9,6 +9,13 @@
         <?php
 
           session_start();
+<<<<<<< HEAD
+=======
+          $_SESSION['username'] = "Putin" ;
+          $_SESSION['userid'] = "2" ;
+          $_SESSION['avatar'] = "images/u2.jpg";
+
+>>>>>>> 1bc5e6e2ec1a8af704190632e9a9f0f10262eb81
           $_SESSION['type'] = "-1";
 
         ?>
@@ -18,7 +25,10 @@
         <title>CHA! Sign In</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+<<<<<<< HEAD
         <link rel="shortcut icon" href="http://faviconist.com/icons/6bcc3804767364c4d7354d948b1ad96d/favicon.ico" />
+=======
+>>>>>>> 1bc5e6e2ec1a8af704190632e9a9f0f10262eb81
 
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <style>
@@ -99,6 +109,7 @@
           <input type="email" class="form-control" placeholder="Email address"  required autofocus>
           <input type="password" class="form-control" placeholder="Password" id="input" required>
           <div id="extrainput" style="display:none;">
+<<<<<<< HEAD
             <input type="text" class="form-control" placeholder="username" required autofocus>
             <input type="text" class="form-control" placeholder="avatar url" required>
           </div>
@@ -110,6 +121,16 @@
 
     </div>
 
+=======
+            <input type="username" class="form-control" placeholder="username" required autofocus>
+            <input type="imageurl" class="form-control" placeholder="avatar url" required>
+          </div>
+          <button class="btn btn-lg btn-danger btn-block" id="signinbtn" type="submit"> Sign in </button>
+        </div>
+      </form>
+
+    </div> 
+>>>>>>> 1bc5e6e2ec1a8af704190632e9a9f0f10262eb81
 
     <!-- /container -->  
 
@@ -126,12 +147,19 @@
                         <br>
                         <input type="email" class="form-control" placeholder="Email address" required autofocus style="border-color: #BBBBBB; margin-bottom:8px;">
                         <input type="password" class="form-control" placeholder="Password" required style="border-color: #BBBBBB; margin-bottom:8px;">
+<<<<<<< HEAD
                         <button class="btn btn-lg btn-success btn-block" id="loginbtn" type="button"> Log in </button>
+=======
+                        <button class="btn btn-lg btn-success btn-block" type="submit"> Log in </button>
+>>>>>>> 1bc5e6e2ec1a8af704190632e9a9f0f10262eb81
                       </div>
                     </form>
                   <div class="modal-footer" style="margin-top: 0px; ">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+<<<<<<< HEAD
                     <div id="msg1"></div>
+=======
+>>>>>>> 1bc5e6e2ec1a8af704190632e9a9f0f10262eb81
                   </div>
                 </div>
               </div>

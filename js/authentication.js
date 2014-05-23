@@ -8,17 +8,24 @@ $(input).focus(function(e){
 signinbtn = $('#signinbtn');
 
 $(signinbtn).click(function(e){
+<<<<<<< HEAD
 
+=======
+>>>>>>> 1bc5e6e2ec1a8af704190632e9a9f0f10262eb81
 	target = e.currentTarget;
 	parent = target.parentElement;
 	_email = $(parent.children[3]).val();
 	_password = $(parent.children[4]).val();
+<<<<<<< HEAD
 	_username = $(parent.children[5].children[0]).val();
 	_avatar = $(parent.children[5].children[1]).val();
+=======
+>>>>>>> 1bc5e6e2ec1a8af704190632e9a9f0f10262eb81
 
 	$.ajax({
 		type: "POST",
 		url:'php/authentication.php',
+<<<<<<< HEAD
 		data: { email: _email, password: _password, username : _username, avatar: _avatar, type: 0}
 		}).done(function(e){
 			
@@ -62,3 +69,14 @@ $(loginbtn).click(function(e){
 
 		})
 })
+=======
+		data: { email: _email, password: _password, type: 0}
+		}).done(function(e){
+			//alert(t["id"][0]);
+			t = jQuery.parseJSON(e);
+
+
+
+	})
+})
+>>>>>>> 1bc5e6e2ec1a8af704190632e9a9f0f10262eb81
