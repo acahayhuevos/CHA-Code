@@ -1,0 +1,167 @@
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+#bg{
+   position: relative;
+   margin: 0 auto;
+}
+
+#bg img{
+min-height: 100%;
+min-width: 1024px;
+width:100%;
+height: auto;
+position: fixed;
+left: 0;
+z-index: -1;
+
+-webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+.fadein img {
+    position:absolute;
+    left:-65px;
+    top:0;
+    -webkit-animation-name: fade;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 15s;
+    animation-name: fade;
+    animation-iteration-count: infinite;
+    animation-duration: 15s;
+}
+
+@-webkit-keyframes fade {
+    0% {opacity: 0;}
+    20% {opacity: 1;}
+    33% {opacity: 1;}
+    53% {opacity: 0;}
+    100% {opacity: 0;}
+}
+@keyframes fade {
+    0% {opacity: 0;}
+    20% {opacity: 1;}
+    33% {opacity: 1;}
+    53% {opacity: 0;}
+    100% {opacity: 0;}
+}
+
+#f1 {
+    background-color: lightblue;
+}
+#f2 {
+    -webkit-animation-delay: -10s;
+    background-color: yellow;
+}
+#f3 {
+    -webkit-animation-delay: -5s;
+    background-color: lightgreen;
+}
+
+@media screen and (max-width: 1024px){
+   #bg img{
+    left: 50%;
+    margin-left: -512px;
+   }
+}
+
+   input.form-control{
+   	border-radius: 40px;
+   }
+
+
+}
+.form-signin input[type="email"]{
+   margin-bottom: -1px;
+   border-bottom-right-radius: 0;
+   border-bottom-left-radius: 0; 
+}
+
+.form-signin{
+   max-width: 420px;
+   padding: 15px;
+   margin: 0 auto;
+   margin-top: 10%;
+   color: black;
+}
+
+.form-signin .form-control{
+position: relative;
+height: auto;
+box-sizing: border-box;
+font-size: 16px;
+margin-bottom: 10px;
+}
+
+.form-control{
+   display: block;
+   width: 100%;
+   height: 34px;
+   padding: 6px 12px;
+   font-size: 14px;
+   line-height: 1.5;
+   background-image: none;
+   border: 1px solid white;
+   border-radius: 5px;
+}
+
+.form-signin .form-signin-heading, .form-signin .checkbox{
+   margin-bottom: 10px;
+}
+.placeholder{
+line-height: 1.0;
+}
+
+input.form-control{
+   border-radius: 5px;
+}
+
+input{
+   line-height: normal;
+   letter-spacing: normal;
+   word-spacing: normal;
+   text-transform: none;
+   text-indent: 0px;
+   text-align: start;
+}
+
+input, button, select, textarea{
+   font-family: inherit;
+   font-size: inherit;
+   line-height: inherit;
+}
+
+input[type="password"], input[type="search"]{
+   -webkit-appearance: textfield;
+   cursor: auto;
+}
+h2{
+   font-weight: bold;
+   line-height: 2.0;
+}
+h2, .h2{
+   font-size: 100px;
+   text-align: center;
+}
+
+.slogan{
+   margin-top: -8px;
+  background-color: white;
+  border-radius: 5px;
+  padding: 8px;
+  text-align: center;
+  opacity: 0.6;
+}
+
+#msg1, #msg0{
+  margin-top: 8px;
+  text-align: center;
+  font-weight: bold;
+}
+#msg0{
+  background-color: white;
+  border-radius: 5px;
+  
+}

@@ -15,6 +15,7 @@
         <title>CHA! Explore</title>"
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="http://faviconist.com/icons/6bcc3804767364c4d7354d948b1ad96d/favicon.ico" />
 
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <style>

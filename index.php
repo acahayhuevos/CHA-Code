@@ -7,11 +7,6 @@
 
         <?php
           session_start();
-
-          $_SESSION['username'] = "Putin" ;
-          $_SESSION['userid'] = "2" ;
-          $_SESSION['avatar'] = "images/u2.jpg";
-
           $_SESSION['type'] = "0";
  
         ?>
@@ -21,6 +16,7 @@
         <title>CHA! home</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="http://faviconist.com/icons/6bcc3804767364c4d7354d948b1ad96d/favicon.ico" />
 
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <style>

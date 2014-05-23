@@ -15,7 +15,7 @@
 	  });
 	
 
-	submitPost0 = $('.submitpost0')
+	submitPost0 = $('.submitpost0');
 
 
 	$(submitPost0).click(function(e){
@@ -72,7 +72,7 @@
 				var tostr = [];
 				for (var i = 0; i < a.length; i++) {
 				var _tag = a[i].substr(1, a[i].length);
-				tostr[i] = "<span class='label label-default'><a href='query.php?tag=" + _tag +"'>"."#" + _tag + "</a></span>";
+				tostr[i] = "<span class='label label-default'><a href='query.php?tag=" + _tag + "'>" + "#" + _tag + "</a></span>";
 				}
 
 				var strtags = tostr.join('');
@@ -113,8 +113,6 @@
 		$.getScript("js/post_2.js");
 		//$.getScript("js/replies.js")
 		
-
-
 			//console.log("done");
 			
 		})

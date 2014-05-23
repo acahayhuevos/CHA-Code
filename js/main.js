@@ -14,6 +14,9 @@ $(document).ready(function(){
 		
 	});
 
+		//$.getScript("js/post.js")
+
+
 	$count = $('.count')
 	urlinput = $('.url');
 	tag = $('.tag');
@@ -22,7 +25,13 @@ $(document).ready(function(){
 	$(urlinput).hide();
 	$(tag).hide();
 
+		$.getScript("js/post.js")
+
+
 })
+
+	//$.getScript("js/post.js")
+
 
 function refreshjs()
 {
